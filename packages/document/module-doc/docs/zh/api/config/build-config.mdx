@@ -1299,7 +1299,7 @@ export default defineConfig({
 
 ## style.sass.implementation
 
-配置 `Sass` 使用的实现库，在不指定的情况下，使用的内置版本是 `1.5.4`。
+配置 `Sass` 使用的实现库，在不指定的情况下，使用的内置版本是 `1.54.4`。
 
 - 类型： `string | object`
 - 默认值： `undefined`
@@ -1664,7 +1664,7 @@ export default defineConfig({
 
 同时函数形式可以接收一个参数，为当前打包文件的输出路径
 
-````js title="modern.config.ts"
+```js title="modern.config.ts"
 export default defineConfig({
   buildConfig: {
     format: 'umd',
@@ -1677,7 +1677,4 @@ export default defineConfig({
     },
   },
 });
-```import { aliases } from '../../../../../../toolkit/utils/dist/compiled/browserslist';
-import { createElement } from 'react';
-
-````
+```
