@@ -17,7 +17,7 @@
     "dts-packer": "0.0.3",
     "postcss": "^8.4.35",
     "typescript": "^5",
-    "webpack": "^5.98.0"
+    "webpack": "^5.99.8"
   },
   "devDependencies": {
     "@rollup/plugin-json": "6.1.0",
@@ -79,10 +79,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-is": "^18",
-    "rollup": "^3.29.4",
+    "rollup": "^3.29.5",
     "rollup-plugin-dts": "6.2.1",
     "sass": "1.86.3",
-    "semver": "7.7.1",
+    "semver": "7.7.2",
     "signal-exit": "3.0.7",
     "signale": "1.4.0",
     "slash": "3.0.0",

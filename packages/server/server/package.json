@@ -15,7 +15,7 @@
     "modern",
     "modern.js"
   ],
-  "version": "2.67.4",
+  "version": "2.67.6",
   "jsnext:source": "./src/index.ts",
   "types": "./src/index.ts",
   "main": "./dist/cjs/index.js",
@@ -75,8 +75,8 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "4.2.0",
     "typescript": "^5",
-    "webpack": "^5.98.0",
-    "websocket": "^1"
+    "webpack": "^5.99.8",
+    "websocket": "^1.0.35"
   },
   "peerDependencies": {
     "devcert": "^1.2.2",

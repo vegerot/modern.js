@@ -4,7 +4,7 @@ sidebar_position: 13
 
 # Bundle Size Optimization
 
-Bundle size optimization is an important part in production environment because it directly affects the user experience of online users. In this document, we will introduce some common bundle size optimization methods in Modern.js.
+Bundle size optimization is an important part of optimizing your production environment because it directly affects the user experience. In this document, we will introduce some common bundle size optimization methods in Modern.js.
 
 ## Reduce duplicate dependencies
 
@@ -60,7 +60,7 @@ Please read the [Browserslist](https://rsbuild.dev/guide/advanced/browserslist) 
 
 ## Usage polyfill
 
-When it is clear that third-party dependencies do not require additional polyfill, you can set [output.polyfill](/configure/app/output/polyfill.html) to `usage`.
+When it is clear that third-party dependencies do not require additional polyfills, you can set [output.polyfill](/configure/app/output/polyfill.html) to `usage`.
 
 In `usage` mode, Modern.js analyzes the syntax used in the source code and injects the required polyfill code on demand to reduce the size of polyfill.
 

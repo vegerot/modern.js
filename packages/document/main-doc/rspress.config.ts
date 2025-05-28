@@ -1,10 +1,16 @@
 import path from 'path';
+import { pluginSass } from '@rsbuild/plugin-sass';
+import { pluginLlms } from '@rspress/plugin-llms';
+import { transformerNotationHighlight } from '@shikijs/transformers';
 import { defineConfig } from 'rspress/config';
 
 const docPath = path.join(__dirname, 'docs');
 
 export default defineConfig({
   root: docPath,
+  title: 'Modern.js',
+  description:
+    'The Modern.js framework is a progressive web framework based on React. At ByteDance, we use Modern.js to build upper-level frameworks that have supported the development of thousands of web applications.',
   base: '/',
   logo: 'https://lf-cdn-tos.bytescm.com/obj/static/webinfra/modern-js-website/assets/images/images/modernjs-logo.svg',
   icon: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/uhbfnupenuhf/favicon.ico',
@@ -12,8 +18,11 @@ export default defineConfig({
   themeDir: path.join(__dirname, 'src'),
   markdown: {
     checkDeadLinks: true,
-    experimentalMdxRs: true,
+    shiki: {
+      transformers: [transformerNotationHighlight()],
+    },
   },
+  plugins: [pluginLlms()],
   search: {
     codeBlocks: true,
   },
@@ -59,6 +68,11 @@ export default defineConfig({
     },
     socialLinks: [
       {
+        icon: 'discord',
+        mode: 'link',
+        content: 'https://discord.gg/qPCqYg38De',
+      },
+      {
         icon: 'github',
         mode: 'link',
         content: 'https://github.com/web-infra-dev/modern.js',
@@ -91,5 +105,6 @@ export default defineConfig({
         '@site': require('path').resolve(__dirname),
       },
     },
+    plugins: [pluginSass()],
   },
 });

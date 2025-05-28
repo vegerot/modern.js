@@ -74,10 +74,11 @@ export function initPluginAPI<Extends extends ServerPluginExtends>({
     context = assign(context, updateContext);
   }
 
+  // TODO: Add type in next major version when remove `Proxy`
   const pluginAPI = {
     isPluginExists: pluginManager.isPluginExists,
     getServerContext,
-    getConfig,
+    getServerConfig: getConfig,
     getHooks,
     updateServerContext,
 
@@ -86,6 +87,10 @@ export function initPluginAPI<Extends extends ServerPluginExtends>({
     onReset: hooks.onReset.tap,
     ...extendsPluginApi,
   };
+
+  if (typeof Proxy === 'undefined') {
+    return pluginAPI as ServerPluginAPI<Extends>;
+  }
 
   return new Proxy(pluginAPI, {
     get(target: Record<string, any>, prop: string) {

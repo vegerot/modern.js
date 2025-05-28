@@ -2,6 +2,12 @@
 
 This document details the API for Modern.js CLI plugins. CLI plugins allow you to extend and customize the functionality of Modern.js projects during the build and development process.
 
+:::info
+
+CLI plugins need to be configured via the [`plugins`](/configure/app/plugins) field in `modern.config.ts`.
+
+:::
+
 ## Plugin Basic Structure
 
 A typical CLI plugin structure is as follows:
@@ -318,7 +324,7 @@ Modify the server routing configuration.
 ```typescript
 api.modifyServerRoutes(routes => {
   // Add a new API route
-  routes.concat({
+  routes.push({
     urlPath: '/api',
     isApi: true,
     entryPath: '',
